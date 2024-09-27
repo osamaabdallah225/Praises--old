@@ -1,0 +1,52 @@
+* {
+    
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+
+
+.button-all, #rest{
+
+    width: 300px;
+    height: 50px;
+    font-size: 25px;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin-bottom: 15px;
+    cursor: pointer;
+
+}
+
+
+.block-all {
+
+    width: 60px;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    /* position: absolute;
+    left: 30px;
+    top: 18px; */
+    opacity: .7;
+
+}
+
+.content {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: 0px 1px 2px 3px red;
+    /* border: 1px solid black; */
+    /* height: 600px; */
+    padding:20px;
+    box-shadow: 1px 2px 20px 3px #e9e3e3;
+    
+}

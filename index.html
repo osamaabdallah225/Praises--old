@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="js/js.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>الباقيات الصالحات</title>
+</head>
+
+<body>
+ 
+<div class="content">
+    <div> 
+        <button class="button-all" id="button-1" type="button">سبحان الله <span class="block-all" id="span-1"></span></button> 
+    </div>
+    <div> 
+        <button class="button-all" id="button-2" type="button">الحمد لله<span class="block-all" id="span-2"></span></button> 
+    </div>
+    <div> 
+        <button class="button-all" id="button-3" type="button">لا إله إلا الله<span class="block-all" id="span-3"></span></button> 
+    </div>
+    <div> 
+        <button class="button-all" id="button-4" type="button">الله أكبر<span class="block-all" id="span-4"></span></button> 
+    </div>
+    <div> 
+        <button class="button-all" id="button-5" type="button">لا حول ولا قوة إلا بالله العلي العظيم<span class="block-all" id="span-5"></span></button> 
+    </div>
+    <div> 
+        <button class="button-all" id="button-6" type="button">Total<span class="block-all" id="span-6"></span></button> 
+    </div>
+    
+    <button class="button-all" id="rest" type="button">Rest</button>
+
+    </div>
+    
+   
+    
+    
+   
+  
+
+
+
+    
+
+
+    <script> 
+         
+        let button1 = document.getElementById("button-1");
+        let span1 = document.getElementById("span-1");
+        let button2 = document.getElementById("button-2");
+        let span2 = document.getElementById("span-2");
+        let button3 = document.getElementById("button-3");
+        let span3 = document.getElementById("span-3");
+        let button4 = document.getElementById("button-4");
+        let span4 = document.getElementById("span-4");
+        let button5 = document.getElementById("button-5");
+        let span5 = document.getElementById("span-5");
+        let button6 = document.getElementById("button-6");
+        let span6 = document.getElementById("span-6");
+       
+      
+        
+        let i = 0 ;
+        let ii = 0 ;
+        let iii = 0 ;
+        let x = 0 ;
+        let y = 0 ;
+        let t = 0 ;
+        
+
+        button1.addEventListener("click", function() {
+             t++ ;
+             i++ ;
+             span1.innerText = i ;
+             span6.innerText = t ;
+            this.style.backgroundColor = "green" ;
+            button6.style.backgroundColor = "green" ;
+            
+        })
+        button2.addEventListener("click", function() {
+             ii++ ;
+             t++ ;
+             span2.innerText = ii ;
+             span6.innerText = t ;
+            this.style.backgroundColor = "green" ;
+            button6.style.backgroundColor = "green" ;
+            
+        })
+        button3.addEventListener("click", function() {
+             iii++ ;
+             t++ ;
+             span3.innerText = iii ;
+             span6.innerText = t ;
+            this.style.backgroundColor = "green" ;
+            button6.style.backgroundColor = "green" ;
+            
+        })
+        button4.addEventListener("click", function() {
+             x++ ;
+             t++ ;
+             span4.innerText = x ;
+             span6.innerText = t ;
+            this.style.backgroundColor = "green" ;
+            button6.style.backgroundColor = "green" ;
+            
+        })
+        button5.addEventListener("click", function() {
+             y++ ;
+             t++ ;
+             span5.innerText = y ;
+             span6.innerText = t ;
+            this.style.backgroundColor = "green" ;
+            button6.style.backgroundColor = "green" ;
+           
+        })
+        // button6.addEventListener("click", function() {
+            
+        //      span6.innerText = t ;
+        //     this.style.backgroundColor = "green" ;
+           
+        // })
+        
+      
+
+
+
+
+        let rest = document.getElementById("rest") ;
+        rest.addEventListener("click", function(){
+            i = 0 ;
+            span1.innerText = "" ;
+            button1.style.backgroundColor = "red" ;
+            ii = 0 ;
+            span2.innerText = "" ;
+            button2.style.backgroundColor = "red" ;
+           
+            iii = 0 ;
+            span3.innerText = "" ;
+            button3.style.backgroundColor = "red" ;
+         
+            x = 0 ;
+            span4.innerText = "" ;
+            button4.style.backgroundColor = "red" ;
+          
+            y = 0 ;
+            span5.innerText = "" ;
+            button5.style.backgroundColor = "red" ;
+           
+            t = 0 ;
+            span6.innerText = "" ;
+            button6.style.backgroundColor = "red" ;
+           
+        })
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

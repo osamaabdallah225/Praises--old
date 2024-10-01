@@ -1,8 +1,9 @@
 * {
     /* margin: 0px; */
     direction: rtl;
-    line-height: 1;
-    font-weight: 700;
+    /* line-height: 1; */
+    font-weight: 800;
+    text-align: center;
 }
 
 
@@ -80,7 +81,7 @@ font-size: 22px;
     margin-bottom: 15px;
     cursor: pointer;
     position: relative;
-    right: 15%;
+    /* right: 15%; */
 
 }
  i {

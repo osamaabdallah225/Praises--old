@@ -35,8 +35,7 @@
 
 @media (max-width: 600px) {
     .content{
-    box-shadow: none;
-    transform: none;
+    display: none;
     
     }
     .button-all{

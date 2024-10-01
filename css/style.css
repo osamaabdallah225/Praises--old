@@ -66,11 +66,14 @@ font-size: 22px;
 }
  p.p1 {
     margin-bottom: -15px;
-    margin-top: 13px;
+    /* margin-top: 13px; */
     color: #FF8000;
  }
  p {
     font-size: 27px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: start;
  }
 .button-sub {
     width: 198px;

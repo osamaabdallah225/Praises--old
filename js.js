@@ -1,9 +1,9 @@
 // تحويل الأزرار إلى مصفوفة
-let arr = Array.from(document.getElementsByClassName('button-all'));
+let arr = Array.from(document.getElementsByClassName('main-button'));
 
 // إخفاء جميع العناصر النصية
 function hideAll() {
-    document.querySelectorAll('.test1, .test2, .test3').forEach((el) => {
+    document.querySelectorAll('.main-content1, .main-content2, .main-content3').forEach((el) => {
         el.style.display = 'none';
     });
 }
@@ -22,7 +22,7 @@ arr.forEach((el, index) => {
         resetButtonStyles();  // إعادة تنسيق الأزرار
 
         // إظهار العنصر المطلوب بناءً على الزر
-    (document.querySelector(`.test${index + 1}`)).style.display = 'block';
+    (document.querySelector(`.main-content${index + 1}`)).style.display = 'block';
         el.style.backgroundColor = '#005672';
         el.style.boxShadow = '0 0 10px #008CB9';
     });

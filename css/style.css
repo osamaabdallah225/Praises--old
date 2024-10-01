@@ -8,7 +8,7 @@
 }
 
 
-.button-all{
+.main-button{
     width: 198px;
     height: 60px;
     font-size: 23px;
@@ -44,7 +44,7 @@
     /* word-break: break-all; */
     
     }
-    .button-all{
+    .main-button{
     width: 170px;
     height: 60px;
     font-size: 23px;
@@ -58,7 +58,7 @@
 }
 
 
-.test1, .test2, .test3 {
+.main-content1, .main-content2, .main-content3 {
     display: none;
 }
 
@@ -80,7 +80,7 @@ font-size: 22px;
    
  }
 .button-sub {
-    width: 198px;
+    width: 210px;
     height: 60px;
     font-size: 23px;
     color: white;

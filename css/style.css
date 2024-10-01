@@ -2,7 +2,7 @@
     /* margin: 0px; */
     direction: rtl;
     /* line-height: 1; */
-    font-weight: 800;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -39,8 +39,8 @@
 @media (max-width: 600px) {
     .content{
     box-shadow: none;
-    padding: 0px 11px 0px 0px;
-    word-break: break-all;
+    padding: 0px 9px 0px 0px;
+    /* word-break: break-all; */
     
     }
     .button-all{
@@ -68,6 +68,9 @@ font-size: 22px;
     margin-bottom: -15px;
     margin-top: 13px;
     color: #FF8000;
+ }
+ p {
+    font-size: 27px;
  }
 .button-sub {
     width: 198px;

@@ -67,6 +67,7 @@
 .sub {
 border-bottom: 2px solid #e9e3e3;
 font-size: 22px;
+position: relative;
 
 }
  p.p1 {
@@ -97,8 +98,9 @@ font-size: 22px;
 
 }
  i {
-    /* position: absolute;
-    left: 20px; */
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
     color: #008CB9;
     font-size: 30px;
     

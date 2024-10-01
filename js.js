@@ -34,3 +34,53 @@ document.addEventListener('DOMContentLoaded', function() {
     targetButton.focus();  // تحديد الزر بمجرد تحميل الصفحة
     targetButton.click();  // الضغط على الزر تلقائيًا عند التحميل
 });
+
+
+let button =Array.from(document.getElementsByClassName("button-sub"))
+
+button.forEach((el) => {
+    el.addEventListener('click', () => {
+       el.style.backgroundColor = "green" ;
+       let count =  el.innerText  ;
+       el.innerText = --count ;
+       if (count<=0) {
+       
+        el.parentNode.style.display = "none" ;
+    }
+       
+      
+    });
+});
+
+
+
+
+
+
+
+
+// let arr1 =Array.from(document.getElementsByClassName("button-all"));
+
+// console.log(arr);
+
+// arr.forEach(function(element,idx){
+//     element.addEventListener("click", function(){
+//         element.style.backgroundColor = "green" ;
+
+//     let count =  document.getElementsByClassName("block-all")[idx].innerText  ;
+//       document.getElementsByClassName("block-all")[idx].innerText = --count ;
+//       if (count<=0) {
+       
+//         element.classList.add("hidden") ;
+//     }
+//       if (count<=0) {
+//         document.getElementsByClassName("block-all")[idx].style.display = "none" ;
+//     }
+
+//         // document.getElementsByClassName("block-all")[idx] = 3 ;
+         
+//         // document.getElementsByClassName("block-all")[idx].innerText = ++count ;
+      
+//     })
+//     document.getElementsByClassName("block-all")[idx].innerText = 3 ;
+// })

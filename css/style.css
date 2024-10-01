@@ -33,19 +33,18 @@
 }
 
 
-/* @media (max-width: 600px) {
+@media (max-width: 600px) {
     .content{
     box-shadow: none;
     
     }
     .button-all{
-        width: 320px;
-        height: 62px;
-        font-size: 23px;
-        line-height: 1;
+        width: 160px;
+    height: 60px;
+    font-size: 23px;
     }
    
-} */
+}
 
 
 .test1, .test2, .test3 {

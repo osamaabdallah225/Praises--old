@@ -49,6 +49,9 @@
     font-size: 23px;
     margin-left: 2px;
     }
+    p {
+        text-align: start;
+     }
     
 
 }
@@ -73,20 +76,21 @@ font-size: 22px;
     font-size: 27px;
     margin-top: 20px;
     margin-bottom: 20px;
-    text-align: start;
+   
  }
 .button-sub {
     width: 198px;
     height: 50px;
     font-size: 23px;
     color: white;
-    background-color: #FF8000;
+    background-color: #57C511;
     border-radius: 10px;
     outline: none;
     border: none;
     margin-bottom: 15px;
     cursor: pointer;
     position: relative;
+    /* margin-bottom: 28px; */
     /* right: 15%; */
 
 }

@@ -22,7 +22,7 @@ arr.forEach((el, index) => {
         resetButtonStyles();  // إعادة تنسيق الأزرار
 
         // إظهار العنصر المطلوب بناءً على الزر
-        document.querySelector(`.test${index + 1}`).style.display = 'block';
+    (document.querySelector(`.test${index + 1}`)).style.display = 'block';
         el.style.backgroundColor = '#005672';
         el.style.boxShadow = '0 0 10px #008CB9';
     });

@@ -4,6 +4,7 @@
     /* line-height: 1; */
     font-weight: bold;
     text-align: center;
+    box-sizing: border-box;
     /* background-color: #eaeff0; */
 }
 
@@ -96,10 +97,11 @@ font-size: 22px;
 
 }
  i {
-    position: absolute;
-    left: -50px;
+    /* position: absolute;
+    left: 20px; */
     color: #008CB9;
     font-size: 30px;
+    
  }
 
 
@@ -107,3 +109,6 @@ font-size: 22px;
 .active:active {
     background-color: #008CB9;
 }
+
+
+

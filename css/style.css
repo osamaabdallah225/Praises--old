@@ -1,6 +1,8 @@
 * {
     /* margin: 0px; */
     direction: rtl;
+    line-height: 1;
+    font-weight: 700;
 }
 
 
@@ -57,12 +59,13 @@
 
 
 .sub {
-border-bottom: 1px solid #e9e3e3;
+border-bottom: 2px solid #e9e3e3;
 font-size: 22px;
 
 }
  p.p1 {
-    margin-bottom: -12px;
+    margin-bottom: -15px;
+    margin-top: 13px;
     color: #FF8000;
  }
 .button-sub {

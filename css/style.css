@@ -59,9 +59,9 @@
 }
 
 
-.main-content1, .main-content2, .main-content3 {
+/* .main-content1, .main-content2, .main-content3 {
     display: none;
-}
+} */
 
 
 .sub {
@@ -135,11 +135,6 @@ h1 {
 
 
 
-
-
-
-
-
 /* تنسيق العنصر الأساسي */
 .tooltip {
     position: relative;
@@ -171,12 +166,7 @@ h1 {
     opacity: 1;
   }
 
-  span {
-    font-size: 18px;
-    line-height: 1.4;
-    
-  }
-  
+
   
 .button-all{
     width: 320px;
@@ -214,8 +204,8 @@ h1 {
 
 i#icon {
     position: absolute;
-    top: 24px;
-    right: 20px;
+    top: 20px;
+    right: 40px;
     font-size: 22px;
     color: white;
     cursor: pointer;

@@ -107,7 +107,7 @@ function handleButtonClick(index) {
     // تعطيل الزر إذا وصل إلى 100
     if (counts[index] >= 100) {
         buttons[index].style.backgroundColor = "#958774"; // تغيير اللون
-        buttons[index].disabled = true; // تعطيل الزر
+        // buttons[index].disabled = true; // تعطيل الزر
     }
 }
 

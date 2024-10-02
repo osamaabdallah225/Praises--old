@@ -58,7 +58,14 @@ button.forEach((el, index) => {
 
         // إخفاء العنصر إذا وصل العداد إلى 0
         if (count <= 0) {
-            el.parentNode.style.display = 'none';  // إخفاء العنصر
+    el.parentNode.style.transition = 'transform 1.3s ease'; // إضافة انتقال سلس
+    el.parentNode.style.transform = 'translateX(-400px) '; // تحريك العنصر لأعلى وتكبيره
+    // el.parentNode.style.opacity = '.2'; // تقليل الشفافية إلى 0
+    // إخفاء العنصر بعد انتهاء الانتقال
+    setTimeout(() => {
+        el.parentNode.style.display = 'none';  // إخفاء العنصر بعد 0.5 ثانية
+    }, 800); // نفس مدة الانتقال
+           
         }
 
         el.style.backgroundColor = count > 0 ? "green" : "red"; // تغيير اللون بناءً على القيمة

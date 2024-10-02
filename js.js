@@ -60,7 +60,6 @@ button.forEach((el, index) => {
         if (count <= 0) {
     el.parentNode.style.transition = 'transform 1.3s ease'; // إضافة انتقال سلس
     el.parentNode.style.transform = 'translateX(-400px) '; // تحريك العنصر لأعلى وتكبيره
-    // el.parentNode.style.opacity = '.2'; // تقليل الشفافية إلى 0
     // إخفاء العنصر بعد انتهاء الانتقال
     setTimeout(() => {
         el.parentNode.style.display = 'none';  // إخفاء العنصر بعد 0.5 ثانية
@@ -78,6 +77,8 @@ function resetCounters() {
         el.innerText = originalCounts[index]; // إعادة العداد إلى قيمته الأصلية
         el.style.backgroundColor = "";  // إعادة لون الخلفية إلى الحالة الافتراضية
         el.parentNode.style.display = 'block';  // إظهار العنصر المخفي
+        el.parentNode.style.transition = "none"; // إضافة انتقال سلس
+    el.parentNode.style.transform = "none"; // تحريك العنصر لأعلى وتكبيره
     });
 }
 

@@ -59,9 +59,9 @@
 }
 
 
-/* .main-content1, .main-content2, .main-content3 {
+.main-content1, .main-content2, .main-content3 {
     display: none;
-} */
+}
 
 
 .sub {
@@ -135,6 +135,11 @@ h1 {
 
 
 
+
+
+
+
+
 /* تنسيق العنصر الأساسي */
 .tooltip {
     position: relative;
@@ -146,7 +151,7 @@ h1 {
   .tooltip .tooltiptext {
     visibility: hidden;
     width: 350px;
-    background-color: rgb(247, 242, 242);
+    background-color: rgb(238, 231, 231);
     color: tomato;
     text-align: center;
     border-radius: 6px;
@@ -165,8 +170,14 @@ h1 {
     visibility: visible;
     opacity: 1;
   }
-
-
+/*  خط التول تب */
+  span {
+    font-size: 18px;
+    line-height: 1.4;
+    border-radius: 5px;
+    
+  }
+  
   
 .button-all{
     width: 320px;

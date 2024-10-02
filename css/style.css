@@ -125,3 +125,50 @@ h1 {
 .features p {
     font-size: 22px;
 }
+
+
+
+
+
+
+
+
+
+
+/* تنسيق العنصر الأساسي */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* تنسيق التولتيب (النص المخفي في البداية) */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 350px;
+    background-color: rgb(228, 216, 216);
+    color: tomato;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* يتم وضعه فوق العنصر */
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  /* إظهار التولتيب عند مرور الفأرة فوق العنصر */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  span {
+    font-size: 18px;
+    line-height: 1.4;
+    
+  }
+  

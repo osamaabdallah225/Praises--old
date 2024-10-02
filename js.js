@@ -30,35 +30,17 @@ arr.forEach((el, index) => {
     });
 });
 
-// الوقوف علي الزر عند فتح الصفحة
-const targetButton = document.getElementById('targetButton');
-document.addEventListener('DOMContentLoaded', function() {
-    targetButton.focus();  // تحديد الزر بمجرد تحميل الصفحة
-    targetButton.click();  // الضغط على الزر تلقائيًا عند التحميل
+// تم الالغاء لظهور فضل الاذكار
+// // الوقوف علي الزر عند فتح الصفحة
+// const targetButton = document.getElementById('targetButton');
+// document.addEventListener('DOMContentLoaded', function() {
+//     targetButton.focus();  // تحديد الزر بمجرد تحميل الصفحة
+//     targetButton.click();  // الضغط على الزر تلقائيًا عند التحميل
     
-});
-
-
-// let button =Array.from(document.getElementsByClassName("button-sub"))
-
-// button.forEach((el) => {
-//     el.addEventListener('click', () => {
-//        el.style.backgroundColor = "green" ;
-//        let count =  el.innerText  ;  // هأخد القيمة اللي في الزر واحطها في متغير 
-//        el.innerText = --count ;   // المتغير هينقص من القيمة 
-//     //    اخفاءالذكر 
-   
-
-//        if (count<=0) {
-//         el.parentNode.style.display = "none" ;
-       
-        
-       
-//     }
-       
-      
-//     });
 // });
+
+
+
 
 
 let button = Array.from(document.getElementsByClassName("button-sub"));

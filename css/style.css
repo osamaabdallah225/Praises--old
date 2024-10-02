@@ -67,7 +67,7 @@
 .sub {
 border-bottom: 2px solid #e9e3e3;
 font-size: 22px;
-position: relative;
+
 
 }
  p.p1 {
@@ -98,9 +98,6 @@ position: relative;
 
 }
  i {
-    position: absolute;
-    left: 5%;
-    bottom: 10%;
     color: #008CB9;
     font-size: 30px;
     
@@ -114,3 +111,8 @@ position: relative;
 
 
 
+pre {
+    text-align: start;
+    font-size: 18px;
+    word-break: break-all;
+}

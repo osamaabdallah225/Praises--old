@@ -116,3 +116,12 @@ pre {
     font-size: 18px;
    
 }
+
+h1 {
+    color: tomato;
+    font-size: 25px;
+}
+
+.features p {
+    font-size: 22px;
+}

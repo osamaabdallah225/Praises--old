@@ -177,3 +177,51 @@ h1 {
     
   }
   
+  
+.button-all{
+    width: 320px;
+    height: 60px;
+    line-height: 1;
+    font-size: 22px;
+    color: white;
+    background-color: #FF9700;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+#button-total {
+    background-color: #018BBA;
+    pointer-events: none;
+}
+
+.button-all:active {
+    transform: scale(.98);
+
+}
+.block-all {
+
+    width: 60px;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    opacity: .5;
+}
+
+
+i#icon {
+    position: absolute;
+    top: 24px;
+    right: 20px;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+
+}
+i#icon:active {
+    transform: scale(1.2);
+
+}

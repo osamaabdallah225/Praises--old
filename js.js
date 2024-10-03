@@ -1,12 +1,12 @@
 // تحويل الأزرار إلى مصفوفة
 let arr = Array.from(document.getElementsByClassName('main-button'));
 
-// إخفاء جميع العناصر النصية عدا قسم features عند تحميل الصفحة
+// إخفاء جميع العناصر عند فتح البرنامج  
 function hideAllExceptFeatures() {
     document.querySelectorAll('.main-content1, .main-content2, .main-content3, .main-content4, .main-content5, .main-content6, .main-content7, .main-content8').forEach((el) => {
         el.style.display = 'none';
     });
-    document.querySelector('.features').style.display = 'block';  // إظهار قسم features
+    
 }
 
 // إعادة تعيين تنسيقات الأزرار إلى حالتها الافتراضية
@@ -19,10 +19,22 @@ function resetButtonStyles() {
 
 // إخفاء جميع العناصر النصية
 function hideAll() {
-    document.querySelectorAll('.main-content1, .main-content2, .main-content3 , .main-content4, .main-content5, .main-content6, .main-content7, .main-content8, .features, .fa-gear').forEach((el) => {
+    document.querySelectorAll('.main-content1, .main-content2, .main-content3 , .main-content4, .main-content5, .main-content6, .main-content7, .main-content8, .fa-gear').forEach((el) => {
         el.style.display = 'none';
     });
 }
+
+// لو الامر ده مش موجود الصفحة هتيجي فاضية اول لما تفتح
+    // وظيفة لتشغيل النقر التلقائي عند تحميل الصفحة
+    window.onload = function() {
+        // اختيار الزر باستخدام الـ ID الخاص به
+        var buttonFocus = document.getElementById('autoFocus');
+        buttonFocus.click();  // تنفيذ عملية النقر
+      
+      };
+
+
+
 
 // إضافة حدث تحميل الصفحة
 window.addEventListener('DOMContentLoaded', hideAllExceptFeatures); // إخفاء جميع العناصر إلا قسم features عند تحميل الصفحة
@@ -39,6 +51,10 @@ arr.forEach((el, index) => {
     });
 });
 
+
+
+
+
 // تخزين الأزرار الخاصة بالعدادات
 let button = Array.from(document.getElementsByClassName("button-sub"));
 
@@ -46,7 +62,7 @@ let button = Array.from(document.getElementsByClassName("button-sub"));
 let originalCounts = [];
 
 // حفظ القيمة الأصلية لكل عداد عند تحميل الصفحة
-button.forEach((el, index) => {
+button.forEach((el) => {
     originalCounts.push(parseInt(el.innerText)); // حفظ القيمة الأصلية للعداد
 
     el.addEventListener('click', () => {
@@ -58,8 +74,9 @@ button.forEach((el, index) => {
 
         // إخفاء العنصر إذا وصل العداد إلى 0
         if (count <= 0) {
-    el.parentNode.style.transition = 'transform 1.3s ease'; // إضافة انتقال سلس
+    el.parentNode.style.transition = 'transform 1.3s ease-out', 'opacity 1.3s ease'; // إضافة انتقال سلس
     el.parentNode.style.transform = 'translateX(-400px) '; // تحريك العنصر لأعلى وتكبيره
+    el.parentNode.style.opacity = '.4 '; // تحريك العنصر لأعلى وتكبيره
     // إخفاء العنصر بعد انتهاء الانتقال
     setTimeout(() => {
         el.parentNode.style.display = 'none';  // إخفاء العنصر بعد 0.5 ثانية
@@ -67,7 +84,7 @@ button.forEach((el, index) => {
            
         }
 
-        el.style.backgroundColor = count > 0 ? "green" : "red"; // تغيير اللون بناءً على القيمة
+        el.style.backgroundColor = count >= 0 ? "green" : "red"; // تغيير اللون بناءً على القيمة
     });
 });
 
@@ -153,7 +170,7 @@ document.getElementById("settingIcon").addEventListener("click", function() {
 });
 // 
 
-
+//  الاعدادت
 
 
 let fontSize = localStorage.getItem("fontSize") ? parseInt(localStorage.getItem("fontSize")) : 27; // استعادة الحجم المحفوظ أو تعيين الحجم الافتراضي
@@ -231,13 +248,9 @@ function checkButtonState() {
 
 
 
-
 document.getElementById("theme").addEventListener("click", function() {
     document.body.classList.toggle("dark");
 })
-
-
-
 
 
 
@@ -260,6 +273,6 @@ document.getElementById("theme").addEventListener("click", function() {
 });
 
 
-
+//  نهاية الاعدادات
 
 

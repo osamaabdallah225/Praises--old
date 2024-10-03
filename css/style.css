@@ -244,8 +244,8 @@ ul li {
 
     #settingIcon {
         position: relative;
-       
         cursor: pointer;
+        display: block !important;
     }
     #settingList {
         position: relative;
@@ -258,7 +258,4 @@ ul li {
         
     }
 
-
-
-
-    
+   

@@ -184,6 +184,7 @@ document.getElementById("plus").addEventListener("click", function() {
 
         // حفظ حجم الخط في Local Storage
         localStorage.setItem("fontSize", fontSize);
+        document.getElementById("seeFont").innerHTML = fontSize + "px";
 
         // التحقق من تعطيل الأزرار بعد التغيير
         checkButtonState();
@@ -203,13 +204,17 @@ document.getElementById("minus").addEventListener("click", function() {
 
         // حفظ حجم الخط في Local Storage
         localStorage.setItem("fontSize", fontSize);
+        document.getElementById("seeFont").innerHTML = fontSize + "px";
 
         // التحقق من تعطيل الأزرار بعد التغيير
         checkButtonState();
+
     }
 });
 
+ document.getElementById("seeFont").innerHTML =   fontSize + "px";
 // دالة للتحقق من حالة الأزرار
+
 function checkButtonState() {
     if (fontSize >= 60) {
         document.getElementById("plus").disabled = true; // تعطيل زر التكبير

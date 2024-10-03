@@ -213,7 +213,7 @@ ul {
     list-style: none;
     border: 1px solid #e9e3e3;
     width: 70px;
-    padding: 15px 20px 15px 0px;
+    padding: 14px 11px 15px 0px;
     border-radius: 8px;
 
 }
@@ -236,8 +236,9 @@ ul li {
         transform: scale(1.2);
         
     }
-    ul li i.fa-solid{
-        padding-bottom: 10px;
+    ul li i.fa-solid, ul li span #seeFont {
+        padding: 10px;
+
         
     }
 
@@ -251,3 +252,13 @@ ul li {
         right: 48%;
         background-color: #f8f8f8;
     }
+  
+    #seeFont {
+        color: #008CB9;
+        
+    }
+
+
+
+
+    

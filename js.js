@@ -95,7 +95,8 @@ function resetCounters() {
         el.style.backgroundColor = "";  // إعادة لون الخلفية إلى الحالة الافتراضية
         el.parentNode.style.display = 'block';  // إظهار العنصر المخفي
         el.parentNode.style.transition = "none"; // إضافة انتقال سلس
-    el.parentNode.style.transform = "none"; // تحريك العنصر لأعلى وتكبيره
+       el.parentNode.style.transform = "none"; // تحريك العنصر لأعلى وتكبيره
+       el.parentNode.style.opacity = "";
     });
 }
 

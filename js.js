@@ -19,7 +19,7 @@ function resetButtonStyles() {
 
 // إخفاء جميع العناصر النصية
 function hideAll() {
-    document.querySelectorAll('.main-content1, .main-content2, .main-content3 , .main-content4, .main-content5, .main-content6, .main-content7, .main-content8, .features').forEach((el) => {
+    document.querySelectorAll('.main-content1, .main-content2, .main-content3 , .main-content4, .main-content5, .main-content6, .main-content7, .main-content8, .features, .fa-gear').forEach((el) => {
         el.style.display = 'none';
     });
 }
@@ -140,3 +140,121 @@ document.getElementById("icon").addEventListener("click", function() {
     spans[spans.length - 1].innerText = ""; // إعادة مجموع التسبيحات إلى فارغ
     buttons[buttons.length - 1].style.backgroundColor = "#018BBA"; // إعادة لون الزر الافتراضي
 });
+
+
+document.getElementById("settingIcon").addEventListener("click", function() {
+    const settingList = document.getElementById("settingList");
+    // التبديل بين إظهار وإخفاء القائمة
+    if (settingList.style.display === "none" || settingList.style.display === "") {
+        settingList.style.display = "block"; // إظهار القائمة
+    } else {
+        settingList.style.display = "none"; // إخفاء القائمة
+    }
+});
+// 
+
+
+
+
+let fontSize = localStorage.getItem("fontSize") ? parseInt(localStorage.getItem("fontSize")) : 27; // استعادة الحجم المحفوظ أو تعيين الحجم الافتراضي
+
+// استعادة حجم الخط عند تحميل الصفحة
+window.addEventListener("load", function() {
+    let elements = Array.from(document.getElementsByTagName("p")); // الحصول على جميع عناصر <p>
+    elements.forEach(el => {
+        el.style.fontSize = fontSize + "px"; // تعيين حجم الخط المحفوظ
+    });
+
+    // التحقق من تعطيل الأزرار عند تحميل الصفحة
+    checkButtonState();
+});
+
+
+
+// زر التكبير
+document.getElementById("plus").addEventListener("click", function() {
+    if (fontSize < 60) { // تحقق من عدم تجاوز الحد الأقصى
+        fontSize += 2; // زيادة حجم الخط بمقدار 2
+        let elements = Array.from(document.getElementsByTagName("p")); // الحصول على جميع عناصر <p>
+
+        // تعديل حجم الخط لكل عنصر <p>
+        elements.forEach(el => {
+            el.style.fontSize = fontSize + "px";
+        });
+
+        // حفظ حجم الخط في Local Storage
+        localStorage.setItem("fontSize", fontSize);
+
+        // التحقق من تعطيل الأزرار بعد التغيير
+        checkButtonState();
+    }
+});
+
+// زر التصغير
+document.getElementById("minus").addEventListener("click", function() {
+    if (fontSize > 16) { // تحقق من عدم تجاوز الحد الأدنى
+        fontSize -= 2; // تقليل حجم الخط بمقدار 2
+        let elements = Array.from(document.getElementsByTagName("p")); // الحصول على جميع عناصر <p>
+
+        // تعديل حجم الخط لكل عنصر <p> مع التأكد من أن الحجم لا يقل عن 10px
+        elements.forEach(el => {
+            el.style.fontSize =  fontSize + "px";
+        });
+
+        // حفظ حجم الخط في Local Storage
+        localStorage.setItem("fontSize", fontSize);
+
+        // التحقق من تعطيل الأزرار بعد التغيير
+        checkButtonState();
+    }
+});
+
+// دالة للتحقق من حالة الأزرار
+function checkButtonState() {
+    if (fontSize >= 60) {
+        document.getElementById("plus").disabled = true; // تعطيل زر التكبير
+    } else {
+        document.getElementById("plus").disabled = false; // تفعيل زر التكبير
+    }
+
+    if (fontSize <= 15) {
+        document.getElementById("minus").disabled = true; // تعطيل زر التصغير
+    } else {
+        document.getElementById("minus").disabled = false; // تفعيل زر التصغير
+    }
+}
+
+
+
+
+document.getElementById("theme").addEventListener("click", function() {
+    document.body.classList.toggle("dark");
+})
+
+
+
+
+
+
+// استعادة الوضع المحفوظ من LocalStorage أو تعيين الوضع الافتراضي "light"
+let themeMode = localStorage.getItem("theme") || "light";
+
+// تطبيق الوضع المحفوظ عند تحميل الصفحة
+document.body.className = themeMode;
+
+// تفعيل زر التبديل
+document.getElementById("theme").addEventListener("click", function() {
+    // تبديل السمة بين "light" و "dark"
+    themeMode = themeMode === "light" ? "dark" : "light";
+    
+    // تطبيق السمة الجديدة
+    document.body.className = themeMode;
+    
+    // حفظ السمة الجديدة في LocalStorage
+    localStorage.setItem("theme", themeMode);
+});
+
+
+
+
+

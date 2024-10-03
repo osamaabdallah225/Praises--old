@@ -109,19 +109,6 @@ font-size: 22px;
  }
 
 
-
-.active:active {
-    background-color: #008CB9;
-}
-
-
-
-pre {
-    text-align: start;
-    font-size: 18px;
-   
-}
-
 h1 {
     color: tomato;
     font-size: 25px;
@@ -130,12 +117,6 @@ h1 {
 .features p {
     font-size: 22px;
 }
-
-
-
-
-
-
 
 
 
@@ -226,3 +207,47 @@ i#icon:active {
     transform: scale(1.2);
 
 }
+ 
+ul {
+    display: none;
+    list-style: none;
+    border: 1px solid #e9e3e3;
+    width: 70px;
+    padding: 15px 20px 15px 0px;
+    border-radius: 8px;
+
+}
+ul li { 
+    text-align: start;
+    cursor: pointer;
+}
+
+    /* الوضع الفاتح */
+    body.light {
+        background-color: white;
+        color: black;
+    }
+    /* الوضع الداكن */
+    body.dark {
+        background-color: black;
+        color: white;
+    }
+    ul li i.fa-solid:active{
+        transform: scale(1.2);
+        
+    }
+    ul li i.fa-solid{
+        padding-bottom: 10px;
+        
+    }
+
+    #settingIcon {
+        position: relative;
+       
+        cursor: pointer;
+    }
+    #settingList {
+        position: relative;
+        right: 48%;
+        background-color: #f8f8f8;
+    }

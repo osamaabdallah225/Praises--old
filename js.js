@@ -49,7 +49,6 @@ arr.forEach((el, index) => {
         document.querySelector(`.main-content${index + 1}`).style.display = 'block';
         el.style.backgroundColor = '#005672';
         el.style.boxShadow = '0 0 10px #008CB9';
-        update();
     });
 });
 
@@ -74,7 +73,6 @@ button.forEach((el) => {
             el.innerText = count;  // تحديث النص
 
 
-update();
 
 
 
@@ -291,23 +289,26 @@ document.getElementById("theme").addEventListener("click", function() {
 
 // فانكشين التحديث وعمل فريش للصفحة
 
+// هذه هي الدالة التي تتحقق من حالة التحديث
 function update() {
-
     // تحقق من وجود المفتاح 'numupdate' في localStorage أو قيمته تساوي 'null'
     if (localStorage.getItem('numupdate') === null) {
-        // إذا كانت القيمة null، نقوم بتعيين القيمة '700'
-        localStorage.setItem('numupdate', '6');
+        // إذا كانت القيمة null، نقوم بتعيين القيمة '6' (أول مرة يدخل فيها المستخدم)
+        localStorage.setItem('numupdate', '7');
     } else {
-        // تحقق إذا كانت قيمة 'numupdate' غير '700'
-        if (localStorage.getItem('numupdate') !== '6') {
+        // تحقق إذا كانت قيمة 'numupdate' غير '6'
+        if (localStorage.getItem('numupdate') !== '7') {
             alert('تم تحديث الموقع');
-            // قم بتعيين القيمة إلى '700'
-            localStorage.setItem('numupdate', '6');
+            // قم بتعيين القيمة إلى '6' ليتم التأكيد على أنه تم التحديث
+            localStorage.setItem('numupdate', '7');
             
-            // إعادة تحميل الصفحة بعد التحديث
+            // إعادة تحميل الصفحة بعد التحديث (لكن يجب أن تتم فقط في المرة الأولى)
             location.reload();
-     
+        }
     }
-          
-     }
-    }
+}
+
+// نضيف مستمع للأحداث بحيث يظهر التنبيه عند أي نقر في الصفحة
+document.addEventListener('click', function() {
+    update();  // استدعاء دالة التحديث عندما ينقر المستخدم في أي مكان
+});

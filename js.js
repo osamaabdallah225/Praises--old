@@ -296,13 +296,13 @@ function update() {
     // تحقق من وجود المفتاح 'numupdate' في localStorage أو قيمته تساوي 'null'
     if (localStorage.getItem('numupdate') === null) {
         // إذا كانت القيمة null، نقوم بتعيين القيمة '700'
-        localStorage.setItem('numupdate', '4');
+        localStorage.setItem('numupdate', '5');
     } else {
         // تحقق إذا كانت قيمة 'numupdate' غير '700'
-        if (localStorage.getItem('numupdate') !== '4') {
+        if (localStorage.getItem('numupdate') !== '5') {
             alert('تم تحديث الموقع');
             // قم بتعيين القيمة إلى '700'
-            localStorage.setItem('numupdate', '4');
+            localStorage.setItem('numupdate', '5');
             
             // إعادة تحميل الصفحة بعد التحديث
             location.reload();

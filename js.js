@@ -24,14 +24,14 @@ function hideAll() {
     });
 }
 
-// لو الامر ده مش موجود الصفحة هتيجي فاضية اول لما تفتح
-    // وظيفة لتشغيل النقر التلقائي عند تحميل الصفحة
-    window.onload = function() {
-        // اختيار الزر باستخدام الـ ID الخاص به
-        var buttonFocus = document.getElementById('autoFocus');
-        buttonFocus.click();  // تنفيذ عملية النقر
+// // لو الامر ده مش موجود الصفحة هتيجي فاضية اول لما تفتح
+//     // وظيفة لتشغيل النقر التلقائي عند تحميل الصفحة
+//     window.onload = function() {
+//         // اختيار الزر باستخدام الـ ID الخاص به
+//         var buttonFocus = document.getElementById('autoFocus');
+//         buttonFocus.click();  // تنفيذ عملية النقر
       
-      };
+//       };
 
 
 
@@ -44,10 +44,12 @@ arr.forEach((el, index) => {
         hideAll();  // إخفاء جميع العناصر
         resetButtonStyles();  // إعادة تنسيق الأزرار
 
+        
         // إظهار العنصر المطلوب بناءً على الزر
         document.querySelector(`.main-content${index + 1}`).style.display = 'block';
         el.style.backgroundColor = '#005672';
         el.style.boxShadow = '0 0 10px #008CB9';
+        update();
     });
 });
 
@@ -70,8 +72,18 @@ button.forEach((el) => {
         if (count > 0) {
             count--;  // إنقاص القيمة
             el.innerText = count;  // تحديث النص
+
+
+update();
+
+
+
+
+
         }
 
+
+        
         // إخفاء العنصر إذا وصل العداد إلى 0
         if (count <= 0) {
     el.parentNode.style.transition = 'transform 1.3s ease-out', 'opacity 1.3s ease'; // إضافة انتقال سلس
@@ -174,7 +186,7 @@ document.getElementById("settingIcon").addEventListener("click", function() {
 //  الاعدادت
 
 
-let fontSize = localStorage.getItem("fontSize") ? parseInt(localStorage.getItem("fontSize")) : 27; // استعادة الحجم المحفوظ أو تعيين الحجم الافتراضي
+let fontSize = localStorage.getItem("fontSize") ? parseInt(localStorage.getItem("fontSize")) : 25; // استعادة الحجم المحفوظ أو تعيين الحجم الافتراضي
 
 // استعادة حجم الخط عند تحميل الصفحة
 window.addEventListener("load", function() {
@@ -277,3 +289,25 @@ document.getElementById("theme").addEventListener("click", function() {
 //  نهاية الاعدادات
 
 
+// فانكشين التحديث وعمل فريش للصفحة
+
+function update() {
+
+    // تحقق من وجود المفتاح 'numupdate' في localStorage أو قيمته تساوي 'null'
+    if (localStorage.getItem('numupdate') === null) {
+        // إذا كانت القيمة null، نقوم بتعيين القيمة '700'
+        localStorage.setItem('numupdate', '4');
+    } else {
+        // تحقق إذا كانت قيمة 'numupdate' غير '700'
+        if (localStorage.getItem('numupdate') !== '4') {
+            alert('تم تحديث الموقع');
+            // قم بتعيين القيمة إلى '700'
+            localStorage.setItem('numupdate', '4');
+            
+            // إعادة تحميل الصفحة بعد التحديث
+            location.reload();
+     
+    }
+          
+     }
+    }
